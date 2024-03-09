@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Transaction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>New Transaction</h1>
+    </header>
+
+    <section id="transaction-form">
+        <form method="post" action="{{ url_for('new_transaction') }}">
+            <label for="sender">Sender:</label>
+            <input type="text" name="sender" required>
+
+            <label for="recipient">Recipient:</label>
+            <input type="text" name="recipient" required>
+
+            <label for="amount">Amount:</label>
+            <input type="number" name="amount" required>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <section id="back">
+        <a href="{{ url_for('index') }}" class="back-button">Back to Blockchain</a>
+    </section>
+</body>
+</html>

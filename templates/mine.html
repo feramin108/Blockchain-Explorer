@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mined Block</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Mined Block</h1>
+    </header>
+
+    <section id="mined-block">
+        <div class="block">
+            <h3>Block #{{ block.index }}</h3>
+            <p class="hash">{{ block.previous_hash }}</p>
+            <p class="hash">{{ block.hash }}</p>
+            <p class="timestamp">{{ block.timestamp }}</p>
+            <ul class="transactions">
+                {% for transaction in block.transactions %}
+                    <li>
+                        <span class="sender">{{ transaction.sender }}</span>
+                        sent
+                        <span class="amount">{{ transaction.amount }}</span>
+                        to
+                        <span class="recipient">{{ transaction.recipient }}</span>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+
+    <section id="back">
+        <a href="{{ url_for('index') }}" class="back-button">Back to Blockchain</a>
+    </section>
+</body>
+</html>
