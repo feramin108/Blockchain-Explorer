@@ -1,4 +1,5 @@
 **Project Description:**
+
 Blockchain Explorer is a simple blockchain implementation with a web-based explorer to visualize blocks, transactions, and mine new blocks. The project is built using Python and Flask for the backend, and it includes a basic HTML and CSS frontend for a user-friendly interface.
 
 **Features:**
@@ -8,6 +9,7 @@ New Transactions: Create and submit new transactions.
 
 **How to Set Up:**
 Follow these steps to set up and run the Blockchain Explorer locally:
+
 Clone the Repository:
 Navigate to the Project Directory:
 pip install Flask
